@@ -1,4 +1,5 @@
 
+// Ouput the JSON data to the webpage
 const output = (fishes) => {
     fishes.forEach((fish) => {
       let article = document.createElement("article");
@@ -49,13 +50,13 @@ const output = (fishes) => {
   
   getFishes();
 
-
+  // Clear the fish so that it can sort and put everything in order
   const clearFishes = () => {
     document.querySelector("#fishes").innerHTML = "";
   };
 
 
-  
+  // Function to sort the fish by their names
   const sortBy = () => {
     clearFishes();
   
@@ -99,4 +100,5 @@ const output = (fishes) => {
     }
   };
 
+  // Listen for the sortby to change
   document.querySelector("#sortBy").addEventListener("change", sortBy);
