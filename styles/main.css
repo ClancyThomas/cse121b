@@ -87,7 +87,7 @@ nav ul li a:hover {
 
 /* ID Selectors */
 
-#temples {
+#fishes {
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -107,13 +107,13 @@ nav ul li a:hover {
         margin: 0 10px;
     }
 
-    #temples {
+    #fishes {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media only screen and (min-width: 64em) {
-    #temples {
+    #fishes {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }

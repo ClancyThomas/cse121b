@@ -4,11 +4,22 @@ const output = (fishes) => {
 
       let fishName = document.createElement("h3")
       fishName.textContent = fish["Species Name"];
+
+      let fishScientificName = document.createElement("h4")
+      fishScientificName.textContent = fish["Scientific Name"];
   
-      let fishLocationInfo = document.createElement("h4");
-      fishLocationInfo.textContent = fish["Location"].replace(/<\/?[^>]+(>|$)/g, "");
+      let fishLocationInfo = document.createElement("h5");
+      try {
+        var location = fish["Location"].replace(/<\/?[^>]+(>|$)/g, "");
+        location = location.replace("&nbsp;", "");
+        fishLocationInfo.textContent = location;
+      }
+      catch {
+          fishLocationInfo.textContent = "None"
+      }
 
       article.appendChild(fishName);
+      article.appendChild(fishScientificName);
       article.appendChild(fishLocationInfo);
   
       document.querySelector("#fishes").appendChild(article);
