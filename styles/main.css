@@ -4,7 +4,7 @@ article {
 }
 
 body {
-    font-family: 'Kalam', cursive;
+    font-family: 'Gill Sans', sans-serif; 
 }
 
 div {
@@ -13,9 +13,9 @@ div {
 }
 
 footer {
-    background-color: gray;
+    background-color: rgb(0, 76, 255);
     color: white;
-    padding: 5px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -25,7 +25,8 @@ header {
 }
 
 img {
-    width: 80%;
+    width: 25%;
+    height: 25%
 }
 
 label {
@@ -85,14 +86,6 @@ nav ul li a:hover {
 }
 
 /* ID Selectors */
-#favorite-foods, #hobbies, #places-lived {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: inline-block;
-    text-align: left;
-    vertical-align: top;
-}
 
 #temples {
     display: grid;
