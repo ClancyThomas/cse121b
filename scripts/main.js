@@ -65,8 +65,8 @@ const output = (fishes) => {
       case "fishNameAscending":
         output(
           fishes.sort((fish1, fish2) => {
-            let fishName1 = fish1.fishName.toLowerCase();
-            let fishName2 = fish2.fishName.toLowerCase();
+            let fishName1 = fish1["Species Name"].toLowerCase();
+            let fishName2 = fish2["Species Name"].toLowerCase();
             if (fishName1 < fishName2) return -1;
             else if (fishName1 > fishName2) return 1;
             else return 0;
@@ -76,8 +76,8 @@ const output = (fishes) => {
       case "fishNameDescending":
         output(
           fishes.sort((fish1, fish2) => {
-            let fishName1 = fish1.fishName.toLowerCase();
-            let fishName2 = fish2.fishName.toLowerCase();
+            let fishName1 = fish1["Species Name"].toLowerCase();
+            let fishName2 = fish2["Species Name"].toLowerCase();
             if (fishName1 > fishName2) return -1;
             else if (fishName1 < fishName2) return 1;
             else return 0;
@@ -85,13 +85,12 @@ const output = (fishes) => {
         );
         break;
       default:
-        // using ternary operators
         output(
           fishes.sort((fish1, fish2) =>
-            fish1.fishName.toLowerCase() > fish2.fishName.toLowerCase()
+            fish1["Species Name"].toLowerCase() > fish2["Species Name"].toLowerCase()
               ? 1
-              : fish2.fishName.toLowerCase() >
-                fish1.fishName.toLowerCase()
+              : fish2["Species Name"].toLowerCase() >
+                fish1["Species Name"].toLowerCase()
               ? -1
               : 0
           )
