@@ -25,8 +25,8 @@ header {
 }
 
 img {
-    width: 25%;
-    height: 25%
+    width: 20%;
+    height: 20%
 }
 
 label {
@@ -89,7 +89,7 @@ nav ul li a:hover {
 
 #fishes {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns:  1fr 1fr;
 }
 
 /* Media Queries */
@@ -108,12 +108,12 @@ nav ul li a:hover {
     }
 
     #fishes {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 }
 
 @media only screen and (min-width: 64em) {
     #fishes {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
